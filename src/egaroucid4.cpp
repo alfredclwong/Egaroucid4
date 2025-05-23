@@ -1698,9 +1698,6 @@ int main(){
     int policy, n_stones, ai_player, depth, final_depth;
     board b;
     const int first_moves[4] = {19, 26, 37, 44};
-    cin >> ai_player;
-    cin >> depth;  // 16
-    cin >> final_depth;  // 20
     long long strt = tim();
     search_result result;
     cerr << "initializing" << endl;
@@ -1720,6 +1717,9 @@ int main(){
     search_hash_table_init(1 - f_search_table_idx);
     cerr << "iniitialized in " << tim() - strt << " ms" << endl;
     while (true){
+        cin >> ai_player;  // 0 or 1
+        cin >> depth;  // 16
+        cin >> final_depth;  // 20
         n_stones = input_board(b.b);
         strt = tim();
         cerr << "n_stones: " << n_stones << endl;
