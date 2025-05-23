@@ -1699,8 +1699,8 @@ int main(){
     board b;
     const int first_moves[4] = {19, 26, 37, 44};
     cin >> ai_player;
-    depth = 16;
-    final_depth = 20;
+    cin >> depth;  // 16
+    cin >> final_depth;  // 20
     long long strt = tim();
     search_result result;
     cerr << "initializing" << endl;
